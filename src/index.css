@@ -1,13 +1,614 @@
-body {
+* {
+  padding: 0%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bgcolor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: #828286;
+  --main-text-color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+/* *********************************************NAVBAR CSS STYLING-START ***************************************** */
+
+.navbar-bg {
+  background-color: var(--bgcolor);
+  padding: 2rem 0;
+  z-index: 99;
+}
+
+.navbar-brand {
+  font-size: 2.5rem !important;
+}
+.navbar li {
+  padding: 0 2rem;
+}
+.navbar li a {
+  font-size: 1.7rem;
+  font-weight: lighter;
+  position: relative;
+}
+.navbar li a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0.2rem 0.3rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem !important;
+  color: #fff !important;
+  background-color: var(--primary-color) !important;
+  text-transform: capitalize;
+  font-size: 1.6rem !important;
+}
+.btn-style:first-child {
+  margin-right: 2rem;
+}
+.btn-style:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+/* *********************************************NAVBAR CSS STYLING-END ***************************************** */
+
+/* *********************************************HERO SECTION START ******************************************* */
+
+header {
+  background-color: var(--bgcolor);
+  min-height: 100vh;
+  width: 100%;
+}
+.main-hero-container {
+  height: 80vh;
+  display: flex;
+}
+.main-hero-container h1 {
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.main-hero-para {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 3rem 0 5rm 0;
+  font-weight: lighter;
+  width: 75% !important;
+}
+.main-hero-container h3 {
+  font-weight: lighter;
+}
+
+.main-herosection-images {
+  position: relative;
+}
+
+.main-herosection-images img {
+  width: 60%;
+  height: 75%;
+  margin-top: 100px;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  position: absolute;
+}
+.main-herosection-images .main-hero-img2 {
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  left: 55%;
+  top: -2%;
+}
+.input-group {
+  position: relative !important;
+  border-radius: 20px;
+}
+.form-control-text {
+  position: absolute;
+  height: 5rem;
+  border: none;
+  outline: none;
+  padding-left: 1.5rem !important;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+.input-group-button {
+  position: absolute;
+  right: 26%;
+  top: 5px;
+  color: #fff;
+  background-color: var(--primary-color);
+  height: 4rem;
+  width: 15%;
+  border-radius: 2rem !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+::placeholder {
+  padding-left: 8px;
+}
+
+/* *********************************************HERO SECTION END ****************************************** */
+
+/* *********************************************WORK SECTION START****************************************** */
+.work-container {
+  width: 80vw;
+  padding: 5rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  margin-top: -10rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-top: -10rem;
+}
+.work-container .main-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+  word-spacing: 1rem;
+}
+
+.work-container-subdiv {
+  padding: 0 6rem;
+  margin-right: -6px;
+  /* box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16); */
+}
+
+.work-container .sub-heading {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  display: grid;
+  place-items: center;
+  margin: 2rem auto;
+}
+
+/* *********************************************WORK SECTION END****************************************** */
+
+/* *********************************************ABOUT US START****************************************** */
+
+/* 1nd sectiion about us  */
+.common-section {
+  margin: 5rem;
+}
+.our-services img {
+  width: 40%;
+  height: 75%;
+  margin-top: 10rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+}
+
+.our-services .mini-title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 3rem;
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.our-services .main-heading {
+  font-weight: bolder;
+  margin-bottom: 2.5rem;
+}
+
+.our-services-info {
+  margin-top: 4rem;
+}
+.our-services .our-services-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+.our-services .our-services-data {
+  padding-left: 2rem;
+}
+.our-services .our-services-data p {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+.our-services button {
+  margin-left: 3.5rem;
+}
+
+/* 2nd sectiion about us  */
+
+.our-services-rightside {
+  margin-top: 10rem;
+}
+
+/* *********************************************ABOUT US END*************************************************** */
+
+/* *********************************************SERVICE SECTION START****************************************** */
+.service-main-container {
+  margin-top: 5rem;
+  padding: 5rem 0;
+}
+.service-container .main-heading {
+  margin: 3rem 0;
+  font-weight: bolder;
+}
+.service-main-container .work-container-subdiv {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+.work-container-subdiv:hover {
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+.work-container-subdiv .main-hero-para {
+  width: 100%;
+}
+.work-container-subdiv:hover > .fontawesome-style {
+  background-color: #fff;
+}
+
+.service-main-container .work-container-subdiv .fontawesome-style {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+@media (min-width: 1400px) {
+  .service-container .col-xxl-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-container .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+
+/* *********************************************SERVICE SECTION END****************************************** */
+
+/* *********************************************CONTACT SECTION START****************************************** */
+.contactus-section {
+  margin: 15rem 0;
+}
+
+.contactus-leftside img {
+  min-width: 75%;
+  max-height: 35rem;
+  height: auto;
+  margin-top: 2rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+}
+.contactus-leftside h1 {
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+.contact-input-field {
+  margin-bottom: 4rem;
+}
+
+.contact-rightside form .form-control {
+  border: 3px solid #ced4da;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  font-weight: lighter;
+  -webkit-appearance: none;
+}
+
+.contact-rightside form .form-check-input {
+  width: 2em;
+  height: 2em;
+}
+
+.form-checkbox-style {
+  margin: 4rem 0 !important;
+}
+
+.contact-rightside form .main-hero-para {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0;
+  font-weight: lighter;
+  width: 90%;
+  padding: 0 2rem;
+}
+
+/* *********************************************CONTACT SECTION END****************************************** */
+
+/* *********************************************FOOTER SECTION START****************************************** */
+footer {
+  padding: 5rem 0;
+  background-color: #182334;
+  color: #fff;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+footer li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+footer li:hover {
+  color: var(--primary-color);
+}
+
+footer li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+footer .fontawesome-style:hover {
+  transition: all 1s;
+  color: #fff;
+  animation: rotatefont 1s linear infinite alternate-reverse;
+}
+@keyframes rotatefont {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+footer .main-hero-para {
+  margin: 0;
+}
+
+/* *********************************************FOOTER SECTION END****************************************** */
+
+/* *********************************************ERROR PAGE STYLING START****************************************** */
+
+#not-found {
+  position: relative;
+  height: 100vh;
+}
+#not-found .not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.not-found {
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 92rem;
+  margin: 20rem auto;
+}
+.not-found .not-found-404 {
+  position: absolute;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.not-found .not-found-404 h1 {
+  color: #ececec;
+  font-weight: 900;
+  font-size: 28rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0px;
+  transform: translate(-50%, -50%);
+}
+.not-found h2 {
+  font-size: 4.6rem;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+.not-found p {
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+.not-found a {
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 4rem;
+  background: #189cf0;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 16px 38px;
+  transition: 0.2s all;
+  margin: 3rem;
+}
+.not-found a:hover {
+  background-color: #fff;
+  border-color: #189cf0;
+  color: #189cf0;
+}
+
+@media only screen and (max-width: 400px) {
+  .not-found .not-found-404 h1 {
+    font-size: 162px;
+  }
+  .not-found h2 {
+    font-size: 26px;
+  }
+}
+/* *********************************************ERROR PAGE STYLING START****************************************** */
+/******************************************RESPONSIVE  MEDIA QUERY **************************************/
+
+@media (min-width: 1500px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 998px) {
+  .navbar .navbar-collapse {
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+    background-color: #fff;
+  }
+
+  .input-group .btn-style {
+    font-size: 1.2rem;
+  }
+  .main-hero-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-hero-para {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .main-hero-container .header-left-side {
+    padding-left: 4rem;
+    margin-top: 1rem;
+  }
+
+  .main-herosection-images {
+    position: relative;
+    height: 25rem;
+  }
+  .header-right-side img {
+    width: 60%;
+    height: 100%;
+    margin-top: 0rem;
+  }
+  .header-right-side .main-hero-img2 {
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 50%;
+    top: -2%;
+    box-shadow: 0.8px 0rem 0rem 0.8rem rgba(0, 0, 0, 0.25%);
+  }
+  .input-group .input-group-button {
+    right: 26%;
+    width: 30%;
+  }
+  .work-container {
+    width: 80vw;
+    padding: 5rem 1rem;
+  }
+  .work-container .main-heading {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+    word-spacing: 0rem;
+  }
+  .work-container-subdiv {
+    padding: 0 0rem;
+  }
+
+  .our-services-list {
+    padding-left: 3rem;
+  }
+  .our-services-rightside-img {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .our-services img {
+    width: 70%;
+    height: 85%;
+  }
+  .our-services .our-services-leftside-img img {
+    margin-top:4rem;
+  }
+  .service-container .main-heading {
+    margin: 5rem auto 0 auto;
+    font-weight: bolder;
+  }
+  .service-container .work-container-subdiv {
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .contactus-section{
+    margin: 5rem 0;
+  }
+
+  .contact-rightside {
+    margin-top: 5rem;
+  }
+  .contact-rightside form .main-hero-para {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: lighter;
+    width: 98%;
+    padding: 0px 1rem;
+  }
 }
